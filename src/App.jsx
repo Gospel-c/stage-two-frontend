@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import Header from "./components/Header";
-import MainSection from "./components/MainSection";
-import Footer from './components/Footer';
+import Homepage from './pages/Homepage'
+import Moviedetails from './pages/Moviedetails'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   
   return (
     <>
-      <Header /> 
-      <MainSection />
-      <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Homepage />} exact />
+        <Route path='/movie-details' element={<Moviedetails />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
