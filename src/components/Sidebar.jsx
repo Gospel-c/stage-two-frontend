@@ -8,10 +8,10 @@ import logout from '../assets/Logout.svg'
 
 const Sidebar = () => {
     return (
-        <div className='w-[226px] flex-initial text-[#666666] py-8 border rounded-r-[45px] border-[#1f1e1e]'>
-            <div className='px-4 flex justify-between items-center'>
-                <img src={tv} alt="logo" />
-                <h1 className='text-[24px] font-[600]'>MovieBox</h1>
+        <div className='w-[226px] flex-1 sticky text-[#666666] px-5 py-8 border rounded-r-[45px] border-[#1f1e1e]'>
+            <div className='px-4 flex items-center'>
+                <img className='mr-2 self-start' src={tv} alt="logo" />
+                <h1 className='text-[20px] font-[600]'>MovieBox</h1>
             </div>
             <div className='px-4 py-5 flex mt-14 gap-4 items-center'>
                 <img src={home} alt="logo" />

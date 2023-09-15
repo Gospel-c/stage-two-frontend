@@ -2,39 +2,21 @@ import React, { useEffect, useState } from 'react';
 import Header from "../components/Header";
 import MainSection from "../components/MainSection";
 import Footer from '../components/Footer';
+import { useSelector } from 'react-redux';
 
 
 const Homepage = () => {
+    const {loading} = useSelector(state => state.search);
     
-        const [searchText, setSearchText] = useState("");
-        const [page, setPage] = useState(1);
-        const [content, setContent] = useState([]);
-      
-        const fetchSearch = async () => {
-          const data = await fetch(
-            `https://api.themoviedb.org/3/search/multi?api_key=0edb3f05130ebfedfe4528ec1b02e92b&language=en-US&query=${searchText}&page=${page}&include_adult=false`
-          );
-          const { results } = await data.json();
-          setContent(results);
-          console.log(results)
-        };
-        useEffect(() => {
-          fetchSearch();
-        }, [])
-         
-        const Trigger = (e) => {
-          setSearchText(e.target.value);
-        };
-         
-        const Search = () => {
-          fetchSearch();
-        };
     return (
-        <>
-            <Header trigger={Trigger} search={Search} /> 
-            <MainSection content = {content} />
+        <div className='relative'>
+            {loading && <div className='z-50 absolute bg-white opacity-75 h-[100vh] w-[100vw]'>
+                <span className='animate-spin w-[7rem] absolute top-[40%] left-[45%] h-[7rem] rounded-[50%] border-4 border-y-[#be123c] border-[#f3f3f3]'></span>
+            </div>}
+            <Header /> 
+            <MainSection />
             <Footer /> 
-        </>
+        </div>
     );
 }
 

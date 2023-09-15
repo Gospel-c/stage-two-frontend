@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import MainSecHeader from './MainSecHeader'
 import MovieCard from './MovieCard'
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const MOVIE_API_URL = "https://api.themoviedb.org/3/trending/all/day?api_key=0edb3f05130ebfedfe4528ec1b02e92b";
+const MOVIE_API_URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=0edb3f05130ebfedfe4528ec1b02e92b";
 
 // const initialState = {
 //   loading: true,
@@ -38,6 +39,7 @@ const MOVIE_API_URL = "https://api.themoviedb.org/3/trending/all/day?api_key=0ed
 
 export default function MainSection() {
   // const [state, dispatch] = useReducer(reducer, initialState);
+  const {search} = useSelector(state => state.search)
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -61,7 +63,7 @@ export default function MainSection() {
         }
       }
         fetchData();
-  }, []);
+  }, [search]);
   return (
     <section className='px-[80px] pt-12'>
       <MainSecHeader />
