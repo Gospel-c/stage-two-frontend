@@ -4,7 +4,7 @@ import Maindetails from '../components/Maindetails';
 
 const Moviedetails = () => {
     return (
-        <div className='flex w-[100vw] overflow-hidden'>
+        <div className='flex overflow-hidden'>
             <Sidebar />
             <Maindetails />
         </div>
