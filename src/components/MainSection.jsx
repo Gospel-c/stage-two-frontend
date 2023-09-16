@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import MainSecHeader from './MainSecHeader'
 import MovieCard from './MovieCard'
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { topRatedResult } from '../redux/topRated/topRatedSlice';
 
 const MOVIE_API_URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=0edb3f05130ebfedfe4528ec1b02e92b";
 
@@ -39,12 +40,13 @@ const MOVIE_API_URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=0edb3f0
 
 export default function MainSection() {
   // const [state, dispatch] = useReducer(reducer, initialState);
+  const dispatch = useDispatch();
   const {search} = useSelector(state => state.search)
-  const [movies, setMovies] = useState([]);
+  const { topRated } = useSelector(state => state.topRated);
+  console.log(topRated)
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  console.log(movies);
+  
   useEffect(() => {
 
       const fetchData = async () => {
@@ -56,7 +58,7 @@ export default function MainSection() {
           }
           const result = await response.json();
           setIsLoading(false);
-          setMovies(result);
+          dispatch(topRatedResult(result.results))
         } catch (error) {
           // Handle the error here
           setError(error);
@@ -68,7 +70,7 @@ export default function MainSection() {
     <section className='px-[80px] pt-12'>
       <MainSecHeader />
       <div className='grid grid-cols-4 gap-[80px] pt-8'>
-        <MovieCard error={error} isLoading={isLoading} movies = {movies} />
+        <MovieCard error={error} isLoading={isLoading} movies = {topRated} />
       </div>
     </section>
   )

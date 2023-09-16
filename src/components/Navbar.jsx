@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const handleSearch = () => {
     // Perform the search action when the search icon is clicked
-    dispatch(search()); // Pass the searchText to your search action
+    dispatch(search());
   };
   
   return (

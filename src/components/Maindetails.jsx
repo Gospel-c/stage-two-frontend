@@ -3,8 +3,15 @@ import Star from '../assets/Star.svg'
 import list from '../assets/List.svg'
 import tickets from '../assets/Two Tickets.svg'
 import rectangle from '../assets/Rectangle 37.png'
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Maindetails = () => {
+    const { id } = useParams();
+    const search = useSelector(state => state.search.search);
+    const tRated = useSelector(state => state.search.search);
+    const searchMovie = search.find(movie => movie.id === parseInt(id));
+    console.log(searchMovie);
     return (
         <div className='mx-8 mt-6 flex-[4_1_0%]'>
             <div className='h-[449px] rounded-3xl'>
