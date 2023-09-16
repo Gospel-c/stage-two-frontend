@@ -23,7 +23,7 @@ const MovieCard = ({ movies, error, isLoading }) => {
       ) : search.length === 0 ? (
         movies.map((movie) => {
           return (
-            <Link to={`/movie-details/${movie.id}`} key={movie.id}>
+            <Link to={`/movies/${movie.id}`} key={movie.id}>
 
               <div className='relative w-[250px]' key={movie.id}>
                 <img src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
@@ -54,7 +54,7 @@ const MovieCard = ({ movies, error, isLoading }) => {
         search.map((movie) => {
           
           return (
-            <Link to={`/movie-details/${movie.id}`} key={movie.id}>
+            <Link to={`/movies/${movie.id}`} key={movie.id}>
               <div className='relative w-[250px]' key={movie.id}>
                 <img src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
                 <p className='text-[12px] leading-[15.62px] py-3 font-[700] text-[#9CA3AF]'>{movie.original_language} {movie.release_date}</p>
