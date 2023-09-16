@@ -25,7 +25,7 @@
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/reactjs-original.svg" height="40" alt="nreactjs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reacjs/reactjs-original.svg" height="40" alt="reactjs logo"  />
   <img width="12" />
 </div>
 
@@ -42,7 +42,7 @@ Before starting :checkered_flag:, make sure you have [Git](https://git-scm.com) 
 $ git clone https://github.com/Gospel-c/stage-two-frontend
 
 # Access
-$ cd stage-two-backend
+$ cd stage-two-frontend
 
 # Install dependencies
 $ npm install
