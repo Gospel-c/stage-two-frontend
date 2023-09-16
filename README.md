@@ -14,7 +14,7 @@
 
 ###
 
-<p align="left">When the hompage loads it automatically fetches the top rated movies and displays them on the homepage. A user can also search for a movies, which also displays on the homepage. Clicking on any of these movie cards takes a user to a movie-details page, url: http://localhost:5173/movie-details/2473</p>
+<p align="left">When the hompage loads it automatically fetches the top rated movies and displays them on the homepage. A user can also search for a movies, which also displays on the homepage. Clicking on any of these movie cards takes a user to a movie-details page, url: http://poetic-torte-2b5794.netlify.app/movie-details/2473</p>
 
 ###
 
@@ -25,7 +25,7 @@
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reacjs/reactjs-original.svg" height="40" alt="reactjs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactjs/reactjs-original.svg" height="40" alt="reactjs logo"  />
   <img width="12" />
 </div>
 
