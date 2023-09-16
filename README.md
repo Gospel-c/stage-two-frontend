@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">This is a movie app that uses TMDB API to display movie information. It retrieves the top rated movies and displays them on the homepage. When a user clicks on any movie card, its takes the user to a movie details page that displays the information for that single movie.</p>
+<p align="left">This is a movie app that uses TMDB API to display movie information. It retrieves the top rated movies and displays them on the homepage. When a user clicks on any movie card, its takes the user to a movie details page that displays the information for that movie.</p>
 
 ###
 
