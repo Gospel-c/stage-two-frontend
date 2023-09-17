@@ -28,18 +28,18 @@ const Maindetails = () => {
                     <div className='flex-1'>
                         <div className=''>
                             <div className='flex items-center gap-3'>
-                                <p className='text-[#404040] text-[23px] whitespace-nowrap leading-[34.5px] font-[700]'>{searchMovie.title} &#46; {searchMovie.release_date} &#46; {searchMovie.original_language} </p>
+                                <p data-testid = "movie-title" className='text-[#404040] text-[23px] whitespace-nowrap leading-[34.5px] font-[700]'>{searchMovie.title} &#46; {searchMovie.original_language} </p>
                                 <button className='w-[84px] h-[30px] text-[#B91C1C] rounded-2xl border border-[#F8E7EB]'>{searchMovie.media_type}</button>
-                                <button className='w-[84px] h-[30px] text-[#B91C1C] rounded-2xl border border-[#F8E7EB]'>Drama</button>
+                                <button data-testid = "movie-release-date"  className='w-[84px] h-[30px] text-[#B91C1C] rounded-2xl border border-[#F8E7EB]'>{searchMovie.release_date}</button>
                             </div>
                             <div className='mt-8'>
-                                <p className='leading-7'>
+                                <p data-testid = "movie-overview" className='leading-7'>
                                     {searchMovie.overview}
                                 </p>
                             </div>
                         </div>
                         <div className='mt-8'>
-                            <p className='mb-8'>Popularity: <span className='text-[#B91C1C]'>{searchMovie.popularity}</span></p>
+                            <p data-testid = "movie-runtime"  className='mb-8'>Popularity: <span className='text-[#B91C1C]'>{searchMovie.popularity}</span></p>
                             <p className='mb-8'>Vote Count: <span className='text-[#B91C1C]'>{searchMovie.vote_count}</span></p>
                             <p className='mb-8'>Stars: <span className='text-[#B91C1C]'></span></p>
                         </div>
