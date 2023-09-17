@@ -25,10 +25,10 @@ const MovieCard = ({ movies, error, isLoading }) => {
           return (
             <Link to={`/movies/${movie.id}`} key={movie.id}>
 
-              <div className='relative w-[250px]' key={movie.id}>
-                <img src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
-                <p className='text-[12px] leading-[15.62px] py-3 font-[700] text-[#9CA3AF]'>{movie.original_language} {movie.first_air_date}</p>
-                <p className='text-[18px] leading-[23.44px] font-[700] text-[#111827]'>{movie.name}</p>
+              <div data-testid = "movie-card" className='relative w-[250px]' key={movie.id}>
+                <img data-testid = "movie-poster" src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
+                <p data-testid = "movie-release-date" className='text-[12px] leading-[15.62px] py-3 font-[700] text-[#9CA3AF]'>{movie.original_language} {movie.first_air_date}</p>
+                <p data-testid = "movie-title" className='text-[18px] leading-[23.44px] font-[700] text-[#111827]'>{movie.name}</p>
                 <div className='flex my-4 justify-between'>
                   <div className='flex gap-3'>
                     <img src={imdb} alt="imbd image" />
@@ -55,10 +55,10 @@ const MovieCard = ({ movies, error, isLoading }) => {
           
           return (
             <Link to={`/movies/${movie.id}`} key={movie.id}>
-              <div className='relative w-[250px]' key={movie.id}>
-                <img src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
-                <p className='text-[12px] leading-[15.62px] py-3 font-[700] text-[#9CA3AF]'>{movie.original_language} {movie.release_date}</p>
-                <p className='text-[18px] leading-[23.44px] font-[700] text-[#111827]'>{movie.title}</p>
+              <div data-testid = "movie-card" className='relative w-[250px]' key={movie.id}>
+                <img data-testid = "movie-poster" src={movie.poster_path ? `${img_300}/${movie.poster_path}` : unavailable} alt="movie poster" />
+                <p data-testid = "movie-release-date" className='text-[12px] leading-[15.62px] py-3 font-[700] text-[#9CA3AF]'>{movie.original_language} {movie.release_date}</p>
+                <p data-testid = "movie-title" className='text-[18px] leading-[23.44px] font-[700] text-[#111827]'>{movie.title}</p>
                 <div className='flex my-4 justify-between'>
                   <div className='flex gap-3'>
                     <img src={imdb} alt="imbd image" />
